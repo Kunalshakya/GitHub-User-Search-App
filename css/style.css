@@ -1,0 +1,175 @@
+:root {
+  /* --lm-bg: hsl(228, 100%, 98%);
+  --lm-bg-content: hsl(0, 0%, 100%);
+  --text-color: hsl(217, 35%, 45%);
+  --text-color-alt: hsl(217, 21%, 21%);
+  --lm-shadow-inactive: 0px 16px 30px -10px hsla(0, 0%, 0%, 0.2);
+  --lm-icon-bg: brightness(100%); */
+  
+  /* Btn */
+  /* --btn: hsl(212, 100%, 50%);
+  --btn-hover: hsl(212, 100%, 69%); */
+  
+  --bg-main: hsl(227, 100%, 98%);
+  --bg-content: hsl(0, 0%, 100%);
+  --text-color: hsl(217, 20%, 51%);
+  --user-name-color: hsl(217, 21%, 21%);
+  --number-color: hsl(217, 21%, 21%);
+  
+  --lm-shadow: 0px 16px 30px -10px hsla(227, 46%, 50%, 0.2);
+  --Blue: hsl(212, 100%, 50%);
+  --Light-blue: hsl(217, 20%, 51%);
+  --Dark-blue: hsl(217, 35%, 45%);
+  --Dark-blue-darker: hsl(222, 41%, 20%);
+  --Very-dark-blue: hsl(217, 21%, 21%);
+  --White: hsl(0, 0%, 100%);
+}
+
+.dark {
+  --bg-main: hsl(220, 40%, 13%);
+  --bg-content: hsl(222, 41%, 20%);
+  --text-color: hsl(0, 0%, 100%);
+  --user-name-color: hsl(0, 0%, 100%);
+  --number-color: hsl(0, 0%, 100%);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+}
+
+body {
+  height: 100vh;
+
+  font-size: 15px;
+  color: var(--text-color);
+  background-color: var(--bg-main);
+}
+
+/* Generic styles */
+/* .colour-blue-darker {
+  color: var(--color);
+} */
+/* Generic styles end */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* Header styles starts here */
+.header {
+  width: 50%;
+  
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-mode {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+/* Header styles ends here */
+
+
+/* Searh bar styles starts here */
+.search-bar {
+  width: 50%;
+
+  display: flex;
+  justify-content: center;
+
+  background-color: var(--bg-content);
+}
+
+.search-area {
+  width: 100%;
+  border: none;
+  background-color: var(--bg-content);
+}
+/* Searh bar styles ends here */
+
+/* user information container styles starts here  */
+.user-information-container {
+  width: 50%;
+
+  display: flex;
+  gap: 2rem;
+
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: var(--lm-shadow);
+  background-color: var(--bg-content);
+}
+
+.profile-img {
+  height: 117px;
+  border-radius: 50%;
+}
+
+.profile-information {
+  width: 100%;
+}
+
+.user-name-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-name {
+  font-size: 26px;
+  font-weight: bold;
+  color: var(--user-name-color);
+}
+
+.joined-date {
+  padding-top: 10px;
+}
+
+.user-bio {
+  line-height: 25px;
+  opacity: 0.75;
+  margin-top: 1rem;
+}
+
+.user-work-information {
+  display: flex;
+  /* gap: 5rem; */
+  justify-content: space-between;
+
+  margin: 2rem 0;
+  padding: 1.125rem 2rem;
+  border-radius: 15px;
+  background-color: var(--bg-main);
+}
+
+.repos, .followers, .following {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--number-color);
+  margin-top: 10px;
+}
+
+.user-links {
+  display: flex;
+  justify-content: space-between;
+}
+/* user information container styles ends here  */
+
+@media screen and (max-width: 1190px) {
+
+  .header {
+    width: 70%;
+  }
+  
+  .user-information-container {
+    width: 70%;
+  }
+}
