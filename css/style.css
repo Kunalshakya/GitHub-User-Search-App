@@ -15,8 +15,12 @@
   --text-color: hsl(217, 20%, 51%);
   --user-name-color: hsl(217, 21%, 21%);
   --number-color: hsl(217, 21%, 21%);
+  --box-shadow: 0px 16px 30px -10px hsla(227, 46%, 50%, 0.2);
+
+  /* Btn */
+  --btn: hsl(212, 100%, 50%);
+  --btn-hover: hsl(212, 100%, 69%);
   
-  --lm-shadow: 0px 16px 30px -10px hsla(227, 46%, 50%, 0.2);
   --Blue: hsl(212, 100%, 50%);
   --Light-blue: hsl(217, 20%, 51%);
   --Dark-blue: hsl(217, 35%, 45%);
@@ -31,6 +35,7 @@
   --text-color: hsl(0, 0%, 100%);
   --user-name-color: hsl(0, 0%, 100%);
   --number-color: hsl(0, 0%, 100%);
+  --box-shadow: none;
 }
 
 *,
@@ -45,7 +50,6 @@
 body {
   height: 100vh;
 
-  font-size: 15px;
   color: var(--text-color);
   background-color: var(--bg-main);
 }
@@ -57,9 +61,12 @@ body {
 /* Generic styles end */
 
 .container {
+  height: 100%;
+  gap: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 
@@ -84,15 +91,46 @@ body {
   width: 50%;
 
   display: flex;
-  justify-content: center;
+  align-items: center;
 
+  padding: 0.5rem;
+  border-radius: 15px;
   background-color: var(--bg-content);
+  box-shadow: var(--box-shadow);
+}
+
+.search-icon {
+  margin: 0 1.5rem;
 }
 
 .search-area {
   width: 100%;
+
+  font-size: 18px;
+  color: var(--text-color);
   border: none;
-  background-color: var(--bg-content);
+  background: none;
+  outline: none;
+}
+
+.search-area::placeholder {
+  color: var(--text-color);
+
+}
+
+.search-btn {
+  padding: 12px;
+  font-size: 16px;
+  min-width: 84px;
+  background-color: var(--btn);
+  border: none;
+  border-radius: 10px;
+  color: var(--White);
+  font-weight: bold;
+}
+
+.search-btn:hover {
+  background-color: var(--btn-hover);
 }
 /* Searh bar styles ends here */
 
@@ -103,9 +141,9 @@ body {
   display: flex;
   gap: 2rem;
 
-  padding: 2.5rem;
+  padding: 2rem;
   border-radius: 15px;
-  box-shadow: var(--lm-shadow);
+  box-shadow: var(--box-shadow);
   background-color: var(--bg-content);
 }
 
@@ -118,7 +156,18 @@ body {
   width: 100%;
 }
 
+.user-basic-detail {
+  display: flex;
+  gap: 2rem;
+}
+
+.mobile-user-img{
+  display: none;
+}
+
 .user-name-container {
+  width: 100%;
+
   display: flex;
   justify-content: space-between;
 }
@@ -133,10 +182,14 @@ body {
   padding-top: 10px;
 }
 
+.user-id {
+  color: var(--Blue);
+}
+
 .user-bio {
   line-height: 25px;
   opacity: 0.75;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 .user-work-information {
@@ -145,7 +198,7 @@ body {
   justify-content: space-between;
 
   margin: 2rem 0;
-  padding: 1.125rem 2rem;
+  padding: 1.125rem 5rem 1.125rem 2rem;
   border-radius: 15px;
   background-color: var(--bg-main);
 }
@@ -161,15 +214,112 @@ body {
   display: flex;
   justify-content: space-between;
 }
+
+.user-location, 
+.user-website-link,
+.user-twitter-link,
+.user-company {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-location,
+.user-twitter-link {
+  margin-bottom: 1rem;
+}
+
+.user-website-link a {
+  text-decoration: none;
+  color: var(--text-color);
+}
 /* user information container styles ends here  */
 
-@media screen and (max-width: 1190px) {
+@media screen and (max-width: 1200px) {
 
-  .header {
+  .header, .search-bar, .user-information-container {
     width: 70%;
   }
   
-  .user-information-container {
-    width: 70%;
+}
+
+@media screen and (max-width: 850px) {
+
+  .mobile-user-img {
+    display: block;
   }
+
+  .user-name-container {
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .joined-date {
+    padding: 0;
+  }
+
+  .user-profile-img-container {
+    display: none;
+  }
+  
+}
+
+@media screen and (max-width: 650px) {
+
+  body {
+    font-size: 13px;
+  }
+
+  .header, .search-bar, .user-information-container {
+    width: 90%;
+  }
+
+  .search-icon {
+    margin: 0 0.5rem 0 0;
+  }
+
+  .search-area {
+    font-size: 13px;
+  }
+
+  .search-btn {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .user-information-container {
+    padding: 1rem;
+  }
+
+  .profile-img {
+    height: 70px;
+  }
+  
+  .user-basic-detail {
+    gap: 1rem;
+  }
+
+  .user-name-container {
+    gap: 0;
+  }
+
+  .user-name {
+    font-size: 20px;
+  }
+
+  .user-work-information {
+    padding: 1rem;
+    justify-content: space-around;
+  }
+
+  .repos, .followers, .following {
+    font-size: 18px;
+  }
+
+  .user-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
 }
