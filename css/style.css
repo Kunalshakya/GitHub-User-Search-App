@@ -58,20 +58,27 @@ body {
 } */
 /* Generic styles end */
 
-.container {
+.container-wrapper {
   height: 100vh;
-  gap: 1rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 50%;
+
+  position: relative;
+
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  gap: 1rem;
 }
 
 
 /* Header styles starts here */
 .header {
-  width: 50%;
-  
   display: flex;
   justify-content: space-between;
 }
@@ -81,13 +88,27 @@ body {
   align-items: center;
   gap: 1rem;
 }
+
+.btn-mode:hover, .search-btn:hover {
+  cursor: pointer;
+}
 /* Header styles ends here */
 
+/* user not found message styles starts here */
+.user-not-found {
+  display: none;
+
+  position: absolute;
+  right: 0;
+  top: 2.1rem;
+
+  color: red;
+  font-weight: bold;
+}
+/* user not found message styles ends here */
 
 /* Searh bar styles starts here */
 .search-bar {
-  width: 50%;
-
   display: flex;
   align-items: center;
 
@@ -118,6 +139,7 @@ body {
 
 .search-btn {
   padding: 12px;
+  margin-left: 1rem;
   font-size: 16px;
   min-width: 84px;
   background-color: var(--btn);
@@ -134,8 +156,6 @@ body {
 
 /* user information container styles starts here  */
 .user-information-container {
-  width: 50%;
-
   display: flex;
   gap: 2rem;
 
@@ -182,6 +202,7 @@ body {
 
 .user-id {
   color: var(--Blue);
+  text-decoration: none;
 }
 
 .user-bio {
@@ -235,7 +256,7 @@ body {
 
 @media screen and (max-width: 1200px) {
 
-  .header, .search-bar, .user-information-container {
+  .container {
     width: 70%;
   }
   
@@ -269,7 +290,7 @@ body {
     font-size: 13px;
   }
 
-  .header, .search-bar, .user-information-container {
+  .container {
     width: 90%;
   }
 
