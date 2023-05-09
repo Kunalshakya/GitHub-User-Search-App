@@ -7,9 +7,8 @@
   --lm-icon-bg: brightness(100%); */
   
   /* Btn */
-  /* --btn: hsl(212, 100%, 50%);
+  /* --btn: hsl(212, 100%, 50%);#4b6a9b
   --btn-hover: hsl(212, 100%, 69%); */
-  
   --bg-main: hsl(227, 100%, 98%);
   --bg-content: hsl(0, 0%, 100%);
   --text-color: hsl(217, 20%, 51%);
@@ -59,7 +58,7 @@ body {
 /* Generic styles end */
 
 .container-wrapper {
-  height: 100vh;
+  min-height: 100vh;
 
   display: flex;
   justify-content: center;
@@ -196,8 +195,11 @@ body {
   color: var(--user-name-color);
 }
 
-.joined-date {
+.joined-date-continer {
   padding-top: 10px;
+
+  display: flex;
+  gap: 0.5rem;
 }
 
 .user-id {
@@ -234,13 +236,18 @@ body {
   justify-content: space-between;
 }
 
+.user-links > div {
+  width: 48%;
+}
+
 .user-location, 
 .user-website-link,
 .user-twitter-link,
 .user-company {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 1rem;
+  word-break: break-all;
 }
 
 .user-location,
@@ -248,7 +255,7 @@ body {
   margin-bottom: 1rem;
 }
 
-.user-website-link a {
+.user-website-link a, .user-twitter-link a {
   text-decoration: none;
   color: var(--text-color);
 }
@@ -274,7 +281,7 @@ body {
     gap: 0.5rem;
   }
 
-  .joined-date {
+  .joined-date-continer {
     padding: 0;
   }
 

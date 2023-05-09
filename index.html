@@ -65,7 +65,12 @@
                 <p class="user-name" id="userName">The Octocat</p>
                 <a href="https://github.com/octocat" target="_blank" class="user-id" id="userId">@octocat</a>
               </div>
-              <p class="joined-date">Joined 25 Jan 2011</p>
+              <div class="joined-date-continer">
+                <p>Joined</p>
+                <p id = "joinDate">25</p>
+                <p id = "joinMonth">Jan</p>
+                <p id = "joinYear">2011</p>
+              </div>
             </div>
           </div>
           <!-- user name and join date container ends here -->
@@ -99,17 +104,17 @@
               </div>
               <div class="user-website-link">
                 <img src="./assets/icon-website.svg" alt="Website Logo">
-                <p><a href="https://github.blog" id="userWebsite">https://github.blog</a></p>
+                <p><a href="https://github.blog" target="_blank" id="userWebsite">github.blog</a></p>
               </div>
             </div>
             <div>
               <div class="user-twitter-link">
-                <img src="./assets/icon-twitter.svg" alt="Twitter Logo">
-                <p>Not available</p>
+                <img src="./assets/icon-twitter.svg" alt="Twitter Logo" id="twitterIcon">
+                <a href="#" target="_blank" id="userTwitterName">Not available</a>
               </div>
               <div class="user-company">
                 <img src="./assets/icon-company.svg" alt="Company Logo">
-                <p>@github</p>
+                <p id="userCompany">@github</p>
               </div>
             </div>
           </div>
