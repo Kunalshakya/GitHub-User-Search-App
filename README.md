@@ -27,7 +27,14 @@ Users should be able to:
 - Have the correct color scheme chosen for them based on their computer preferences.
 
 ### Screenshot
+- Desktop
 
+![](./Screenshorts/desktop-light-theme.png)
+![](./)
+![](/Screenshorts/Screenshot%20(28).png)
+![](/Screenshorts/Screenshot%20(28).png)
+![](/Screenshorts/Screenshot%20(28).png)
+![](/Screenshorts/Screenshot%20(28).png)
 
 ### Links
 

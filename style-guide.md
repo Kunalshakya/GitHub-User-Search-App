@@ -5,12 +5,12 @@
 The screenshots were taken to the following widths:
 
 - Light Mode
-  - Mobile: 375px [(Preview)](./screenshots/mobile-light.jpg)
-  - Desktop: 1440px [(Preview)](./screenshots/desktop-light.jpg)
+  - Mobile: 375px [(Preview)](./Screenshorts/mobile-light-theme.png)
+  - Desktop: 1440px [(Preview)](./Screenshorts/desktop-light-theme.png)
 
 - Dark Mode
-  - Mobile: 375px [(Preview)](./screenshots/mobile-dark.jpg)
-  - Desktop: 1440px [(Preview)](./screenshots/desktop-dark.jpg)
+  - Mobile: 375px [(Preview)](./Screenshorts/mobile-dark-theme.png)
+  - Desktop: 1440px [(Preview)](./Screenshorts/desktop-dark-theme.png)
 
 ## Colors
 
