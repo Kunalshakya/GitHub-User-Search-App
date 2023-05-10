@@ -27,14 +27,21 @@ Users should be able to:
 - Have the correct color scheme chosen for them based on their computer preferences.
 
 ### Screenshot
+
 - Desktop
 
 ![](./Screenshorts/desktop-light-theme.png)
-![](./)
-![](/Screenshorts/Screenshot%20(28).png)
-![](/Screenshorts/Screenshot%20(28).png)
-![](/Screenshorts/Screenshot%20(28).png)
-![](/Screenshorts/Screenshot%20(28).png)
+![](./Screenshorts/desktop-dark-theme.png)
+
+- Tablet
+
+![](./Screenshorts/tablet-light-theme.png)
+![](./Screenshorts/tablet-dark-theme.png)
+
+- Mobile
+
+![](./Screenshorts/mobile-light-theme.png)
+![](./Screenshorts/mobile-dark-theme.png)
 
 ### Links
 
