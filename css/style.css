@@ -1,31 +1,25 @@
 :root {
-  /* --lm-bg: hsl(228, 100%, 98%);
-  --lm-bg-content: hsl(0, 0%, 100%);
-  --text-color: hsl(217, 35%, 45%);
-  --text-color-alt: hsl(217, 21%, 21%);
-  --lm-shadow-inactive: 0px 16px 30px -10px hsla(0, 0%, 0%, 0.2);
-  --lm-icon-bg: brightness(100%); */
-  
-  /* Btn */
-  /* --btn: hsl(212, 100%, 50%);#4b6a9b
-  --btn-hover: hsl(212, 100%, 69%); */
+  /* primary colors */
   --bg-main: hsl(227, 100%, 98%);
   --bg-content: hsl(0, 0%, 100%);
-  --text-color: hsl(217, 20%, 51%);
+  --text-color: hsl(217, 35%, 45%);
   --user-name-color: hsl(217, 21%, 21%);
   --number-color: hsl(217, 21%, 21%);
-  --box-shadow: 0px 16px 30px -10px hsla(227, 46%, 50%, 0.2);
-
-  /* Btn */
-  --btn: hsl(212, 100%, 50%);
-  --btn-hover: hsl(212, 100%, 69%);
   
+  /* secondory colors */
   --Blue: hsl(212, 100%, 50%);
   --Light-blue: hsl(217, 20%, 51%);
   --Dark-blue: hsl(217, 35%, 45%);
   --Dark-blue-darker: hsl(222, 41%, 20%);
   --Very-dark-blue: hsl(217, 21%, 21%);
   --White: hsl(0, 0%, 100%);
+  
+  /* Btn */
+  --btn: hsl(212, 100%, 50%);
+  --btn-hover: hsl(212, 100%, 69%);
+  
+  /* box shadow */
+  --box-shadow: 0px 16px 30px -10px hsla(227, 46%, 50%, 0.2);
 }
 
 .dark {
@@ -49,16 +43,11 @@
 body {
   color: var(--text-color);
   background-color: var(--bg-main);
+  transition: background-color 1s ease-in-out;
 }
 
-/* Generic styles */
-/* .colour-blue-darker {
-  color: var(--color);
-} */
-/* Generic styles end */
-
 .container-wrapper {
-  min-height: 100vh;
+  min-height: 100dvh;
 
   display: flex;
   justify-content: center;
@@ -75,11 +64,12 @@ body {
   gap: 1rem;
 }
 
-
 /* Header styles starts here */
 .header {
   display: flex;
   justify-content: space-between;
+
+  transition: all 0.5s ease-in-out;
 }
 
 .btn-mode {
@@ -112,9 +102,10 @@ body {
   align-items: center;
 
   padding: 0.5rem;
-  border-radius: 15px;
+  border-radius: 1rem;
   background-color: var(--bg-content);
   box-shadow: var(--box-shadow);
+  transition: all 0.5s ease-in-out;
 }
 
 .search-icon {
@@ -137,13 +128,12 @@ body {
 }
 
 .search-btn {
-  padding: 12px;
+  padding: 0.75rem;
   margin-left: 1rem;
   font-size: 16px;
-  min-width: 84px;
   background-color: var(--btn);
   border: none;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   color: var(--White);
   font-weight: bold;
 }
@@ -159,13 +149,14 @@ body {
   gap: 2rem;
 
   padding: 2rem;
-  border-radius: 15px;
+  border-radius: 1rem;
   box-shadow: var(--box-shadow);
   background-color: var(--bg-content);
+  transition: all 0.5s ease-in-out;
 }
 
 .profile-img {
-  height: 117px;
+  max-height: 7.3125rem;
   border-radius: 50%;
 }
 
@@ -196,7 +187,7 @@ body {
 }
 
 .joined-date-continer {
-  padding-top: 10px;
+  padding-top: 0.625rem;
 
   display: flex;
   gap: 0.5rem;
@@ -208,27 +199,27 @@ body {
 }
 
 .user-bio {
-  line-height: 25px;
+  line-height: 1.5rem;
   opacity: 0.75;
   margin-top: 1.5rem;
 }
 
 .user-work-information {
   display: flex;
-  /* gap: 5rem; */
   justify-content: space-between;
 
   margin: 2rem 0;
   padding: 1.125rem 5rem 1.125rem 2rem;
-  border-radius: 15px;
+  border-radius: 1rem;
   background-color: var(--bg-main);
+  transition: all 0.5s ease-in-out;
 }
 
 .repos, .followers, .following {
   font-size: 22px;
   font-weight: bold;
   color: var(--number-color);
-  margin-top: 10px;
+  margin-top: 0.625rem;
 }
 
 .user-links {
@@ -257,6 +248,10 @@ body {
 
 .user-website-link a, .user-twitter-link a {
   text-decoration: none;
+  color: var(--text-color);
+}
+
+.link-color {
   color: var(--text-color);
 }
 /* user information container styles ends here  */
@@ -311,7 +306,7 @@ body {
 
   .search-btn {
     font-size: 14px;
-    padding: 12px;
+    padding: 0.75rem;
   }
 
   .user-information-container {
@@ -319,7 +314,7 @@ body {
   }
 
   .profile-img {
-    height: 70px;
+    max-height: 4.375rem;
   }
   
   .user-basic-detail {
@@ -346,6 +341,10 @@ body {
   .user-links {
     flex-direction: column;
     gap: 1rem;
+  }
+
+  .user-links > div {
+    width: 100%;
   }
   
 }
